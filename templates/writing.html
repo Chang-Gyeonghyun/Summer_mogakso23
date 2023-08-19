@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHT_cloud</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/writing.css') }}">
+</head>
+
+<body>
+    <header>
+        <div id="logo">
+            <img src="{{ url_for('static', filename='img/CHT_logo.png') }}" alt="NaN">
+            <span></span>
+        </div>
+
+        <div id="etc">
+            <button>POSTING</button>
+            <button>LOGIN</button>
+        </div>
+    </header>
+    <main>  
+        <div>
+            <form method="POST" action"/posting">
+                <p><label>Input the content<input type="text" name="content"></label>&nbsp&nbsp&nbsp<input type="submit" value="작성하기" onclick="alert('작성 완료!')"></p>
+            </form>
+        </div>
+    </main>
+    <script src="{{ url_for('static', filename='js/header.js') }}"></script>
+</body>
+
+</html>

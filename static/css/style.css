@@ -126,7 +126,7 @@ main{
                 background-color: rgba(130, 85, 234, 0.593);
                 padding: 20px;
 
-                >img{
+                >a >img{
                     background-color: none;
                     width: 200px;
                     height: auto;
@@ -179,7 +179,7 @@ main{
         overflow: visible;
       }
     >hr:first-child:after {
-        content: "A C T I V I T Yã…¤L I N K";
+        content: "A C T I V I T Y?…¤L I N K";
         font-size: 25px;
         font-weight: bolder;
         position: relative;   
@@ -188,7 +188,7 @@ main{
         padding: 0 50px;   
     }
     >hr:last-of-type::after {
-        content: "O U Rã…¤P O S T I N G";
+        content: "O U R?…¤P O S T I N G";
         font-size: 25px;
         font-weight: bolder;
         position: relative;   
@@ -213,9 +213,25 @@ main{
 }
 
 footer{
+    position : relative;
     >div{
         width: 100%;
-        min-height: 180px;
+        height: 180px;
         background-color: rgb(35, 35, 35);
+        display: flex;
+        justify-content: flex-start;
+        >img{
+            margin: 10px;
+            width: 150px;
+            height: auto;
+        }
+        > div{
+            display: flex;
+            align-items: center;
+            line-height: 30px;
+            color: white;
+            font-size: larger;
+        }
+        
     }
 }

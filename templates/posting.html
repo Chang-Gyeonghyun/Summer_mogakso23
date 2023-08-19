@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHT_cloud</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/posting.css') }}">
+</head>
+
+<body>
+    <div id="wrap">
+        <header>
+            <div id="logo">
+                <img src="{{ url_for('static', filename='img/CHT_logo.png') }}" alt="NaN">
+                <span></span>
+            </div>
+
+            <div id="etc">
+                <button>POSTING</button>
+                <button>LOGIN</button>
+            </div>
+        </header>
+
+        <main>
+            <div><img src="{{ url_for('static', filename='img/Posting.png') }}"></div>
+            <div>
+                <ul id="choose">
+                    <li class="topic">TOTAL</li>
+                    <li>CHANG</li>
+                    <li>HUN</li>
+                    <li>THING</li>
+                </ul>
+                <span>HOME &gt; POSTING &gt; <span>TOTAL</span></span>
+            </div>
+            <div>
+                <button onclick="location.href='/writing'">New Posting</button>
+                <form action="/posting" method="get">
+                    <select name="sort">
+                        <option value="title">Title</option>
+                        <option value="writer">Writer</option>
+                    </select>
+                    <input type="text" placeholder="Search" name="subject">
+                    <button><img src="{{ url_for('static', filename='img/search.svg') }}"></button>
+                </form>
+            </div>
+            <article>
+                <ul id="posthome">
+                    {% if Isdata %}
+                        <div id="nothing" class="hidden">
+                            There are no registered post.
+                        </div>
+                        {% for item in items %}
+                        <li>{{ item }}</li>
+                        {% endfor %}
+                    {% else %}
+                        <div id="nothing">
+                            There are no registered post.
+                        </div>
+                    {% endif %}
+                    
+                    {#<li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+                <ul id="pagenumber">
+                    <li><button>1</button></li>
+                    <li><button>2</button></li>
+                    <li><button>3</button></li>
+                    <li><button>next</button></li>
+                    <li><button>final</button></li>
+                </ul>#}
+            </article>
+        </main>
+    </div>
+    <footer>
+        <div>
+            <img src="{{ url_for('static', filename='img/CHT_logo.png') }}"/>
+            <div>
+                &#40;Moagkso&#41;_CHT<br>
+                address: AJOU UNIVERITSTY<br>
+                CHANG: TEL. 010-7928-8810<br>
+                HUN: TEL. 010-4531-8331<br>
+                THING: TEL. 010-4070-2430
+            </div>
+        </div>
+    </footer>
+    <script src="{{ url_for('static', filename='js/header.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/posting.js') }}"></script>
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log in</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+</head>
+<body>
+    <div class="login-wrapper">
+            <h2>Login</h2>
+            <form method="post" action="/log-in" id="login-form">
+                <input type="text" name="userName" placeholder="Email">
+                <input type="password" name="userPassword" placeholder="Password">
+                {% if error%}
+                <span>Password Wrong</span>
+                {%endif%}
+                <label for="remember-check">
+                    <input type="checkbox" id="remember-check">save ID
+                </label>
+                <input type="submit" value="Login">
+            </form>
+    </div>
+</body>
+</html>
