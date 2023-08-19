@@ -1,0 +1,41 @@
+.hidden{
+    display: none;
+}
+
+*{
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background:linear-gradient(to top,#fff,#8155EA);
+    min-height: 100vh;
+}
+
+header{
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    
+    > #logo {
+        > img {
+            position: relative; 
+            left: 0;
+            top: 0;
+            width: 100px;
+            height: auto;
+        }
+    }
+    
+    > #etc {
+        > button {
+            color:white;
+            background-color:rgba(0,0,0,0);
+            border:none;
+            font-size: 22px;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+    }
+}

@@ -1,32 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CHT_cloud</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 
 <body>
     <header>
         <div id="logo">
-            <img src="img/CHT_logo.png" alt="NaN">
+            <img src="{{ url_for('static', filename='img/CHT_logo.png') }}" alt="NaN">
             <span></span>
         </div>
 
         <div id="etc">
             <button>POSTING</button>
+            {% if login %}
+            <button>LOG OUT</button>
+            {% else %}
             <button>LOGIN</button>
+            {% endif %}
         </div>
     </header>
     
-    <div id = "name"><img src="img/CHT_NAME.png"></div>
+    <div id = "name"><img src="{{ url_for('static', filename='img/CHT_NAME.png') }}"></div>
 
     <div id = "search">
-        <form>
-            <input type="text" placeholder="s  e  a  r  c  h"> <!--hidden-->
-            <button><img src="img/search.svg"></button>
+        <form action="/posting">
+            <input type="text" name="keyword" placeholder="s  e  a  r  c  h"> <!--hidden-->
+            <button><img src="{{ url_for('static', filename='img/search.svg') }}"></button>
         </form>
     </div>
     <main>
@@ -34,13 +38,18 @@
         <section>
             <div>
                 <div>
-                    <img src="img/notion1.png">
+                    <a href="https://somber-parsley-d87.notion.site/f7c1380927b14b8aa25d3855e4c59adc?v=f00ffb6c0f2e4ffc871323e836e23d69&pvs=4" target="_blank">
+                    <img src="{{ url_for('static', filename='img/notion1.png') }}">
+                    </a>
                 </div>
+                
                 <span>OUR NOTION</span>
             </div>
             <div>
                 <div>
-                    <img src="img/Github2.png">
+                    <a href="https://github.com/Chang-Gyeonghyun/Summer_mogakso23.git" target="_blank">
+                    <img src="{{ url_for('static', filename='img/Github2.png') }}">
+                    </a>
                 </div>
                 <span>OUR GITHUB</span>
             </div>
@@ -82,9 +91,17 @@
 
     <footer>
         <div>
-            
+            <img src="{{ url_for('static', filename='img/CHT_logo.png') }}"/>
+            <div>
+                &#40;Moagkso&#41;_CHT<br>
+                address: AJOU UNIVERITSTY<br>
+                CHANG: TEL. 010-7928-8810<br>
+                HUN: TEL. 010-4531-8331<br>
+                THING: TEL. 010-4070-2430
+            </div>
         </div>
     </footer>
+    <script src="{{ url_for('static', filename='js/header.js') }}"></script>
 </body>
 
 </html>
