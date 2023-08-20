@@ -22,8 +22,11 @@ def home():
 
 @app.route("/posting",methods=['GET'])
 def search():
+    subject = ""
     writable = False
     Isdata = False
+    if 'userID' in session:
+        writable = True
     if request.method == 'GET':
         sort = request.args.get("sort")      # sort 변수에 "writer"가 저장될 것
         subject = request.args.get("subject")
@@ -33,13 +36,12 @@ def search():
             result = getdata(False, True, subject)
         else:
             result = getdata()
-            
+        if not subject:
+            subject = "TOTAL"
         if result:
             Isdata = True
-            return render_template("posting.html", writable=writable, Isdata=Isdata, items=reversed(result))
-    if session['userID']:
-        writable = True
-    return render_template("posting.html", writable=writable, Isdata=Isdata) #{%%}는 html내에 python코드를 넣게 해준다.
+            return render_template("posting.html", login=writable, Isdata=Isdata, items=reversed(result), subject = subject)
+    return render_template("posting.html", writable=writable, Isdata=Isdata,subject=subject) #{%%}는 html내에 python코드를 넣게 해준다.
 
 
 @app.route("/log-in", methods=['GET', 'POST'])

@@ -18,7 +18,11 @@
 
             <div id="etc">
                 <button>POSTING</button>
+                {% if login %}
+                <button>LOG OUT</button>
+                {% else %}
                 <button>LOGIN</button>
+                {% endif %}
             </div>
         </header>
 
@@ -26,15 +30,19 @@
             <div><img src="{{ url_for('static', filename='img/Posting.png') }}"></div>
             <div>
                 <ul id="choose">
-                    <li class="topic">TOTAL</li>
+                    <li>TOTAL</li>
                     <li>CHANG</li>
                     <li>HUN</li>
                     <li>THING</li>
                 </ul>
-                <span>HOME &gt; POSTING &gt; <span>TOTAL</span></span>
+                <span>HOME &gt; POSTING &gt; <span>{{subject}}</span></span>
             </div>
             <div>
+                {% if login %}
                 <button onclick="location.href='/writing'">New Posting</button>
+                {% else %}
+                <div></div>
+                {% endif %}
                 <form action="/posting" method="get">
                     <select name="sort">
                         <option value="title">Title</option>
@@ -51,26 +59,21 @@
                             There are no registered post.
                         </div>
                         {% for item in items %}
-                        <li>{{ item }}</li>
-                        {% endfor %}
+                        <li>
+                            <span>{{ loop.index }}</span>
+                            <span>{{ item[0] }}</span>
+                            <span>{{ item[1] }}</span>
+                            <span>{{ item[2] }}</span>
+                        </li>
+                      {% endfor %}
                     {% else %}
                         <div id="nothing">
                             There are no registered post.
                         </div>
                     {% endif %}
                     
-                    {#<li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
                 </ul>
-                <ul id="pagenumber">
+                {#<ul id="pagenumber">
                     <li><button>1</button></li>
                     <li><button>2</button></li>
                     <li><button>3</button></li>
