@@ -21,27 +21,35 @@
         </div>
     </header>
     <main>
-        <div class="title_area">
-            <strong class="title">
-                <label for="subject_title">제목</label>
-            </strong>
-            <div class="option_area">
-                <input type="text">
+        <form method="POST" action="/posting">
+            <div class="title_area">
+                <strong class="title">
+                    <label for="subject_title">제 목</label>
+                </strong>
+                <div class="option_area">
+                    <input type="text">
+                </div>
             </div>
-        </div>
-        <div class="attach_area">
-            <strong class="attach">
-                <label for="attachment">첨부 파일</label>
-                <input type="file">
-            </strong>
-        </div>
-        <div>
-            <form method="POST" action"/posting">
-                <p><label><input type="text" name="content"></label>&nbsp&nbsp&nbsp<input type="submit" value="작성하기" onclick="alert('작성 완료!')"></p>
-            </form>
-        </div>
+            <div class="attach_area">
+                <strong class="attach">
+                    <label for="attachment">첨부 파일</label>
+                    <input type="file">
+                </strong>
+            </div>
+            <div class="content_area">
+                <strong class="content">
+                    <label for="contents">내 용</label>
+                </strong>                
+                <p id="editableContent" contenteditable="true"></p>
+            </div>
+            <div class="button_area">
+                <input type="submit" value="뒤로가기" onclick="alert('목록으로!!')">
+                <input type="submit" value="작성하기" onclick="alert('작성 완료!')">
+            </div>
+        </form>
     </main>
     <script src="{{ url_for('static', filename='js/header.js') }}"></script>
+    <script src="../static/js/writing.js"></script>
 </body>
 
 </html>
