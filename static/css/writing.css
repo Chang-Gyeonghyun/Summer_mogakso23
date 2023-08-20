@@ -39,3 +39,65 @@ header{
         }
     }
 }
+
+.title_area {
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    height: 100px;
+    margin-left: 20px;
+}
+.title label {
+    font-size: 24px;
+    margin-right: 50px;
+}
+
+.option_area input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.attach label {
+    font-size: 12px;
+    margin-right: 10px;
+}
+
+.attach input[type="file"] {
+    border: none;
+    background-color: #8155EA;
+}
+
+form {
+    margin-top: 20px;
+}
+
+form p {
+    text-align: center;
+}
+
+form input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 70%;
+    height: auto;
+}
+
+form input[type="submit"] {
+    background-color: #ffffff;
+    color: #8459EA;
+    font-weight: bold;
+    border-color: #8459EA;
+    border-style: solid;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form input[type="submit"]:hover {
+    background-color: #D4C5F9;
+}

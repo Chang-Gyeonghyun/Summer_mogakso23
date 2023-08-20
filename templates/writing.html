@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CHT_cloud</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/writing.css') }}">
+    <link rel="stylesheet" href="../static/css/writing.css">
 </head>
 
 <body>
@@ -20,10 +20,24 @@
             <button>LOGIN</button>
         </div>
     </header>
-    <main>  
+    <main>
+        <div class="title_area">
+            <strong class="title">
+                <label for="subject_title">제목</label>
+            </strong>
+            <div class="option_area">
+                <input type="text">
+            </div>
+        </div>
+        <div class="attach_area">
+            <strong class="attach">
+                <label for="attachment">첨부 파일</label>
+                <input type="file">
+            </strong>
+        </div>
         <div>
             <form method="POST" action"/posting">
-                <p><label>Input the content<input type="text" name="content"></label>&nbsp&nbsp&nbsp<input type="submit" value="작성하기" onclick="alert('작성 완료!')"></p>
+                <p><label><input type="text" name="content"></label>&nbsp&nbsp&nbsp<input type="submit" value="작성하기" onclick="alert('작성 완료!')"></p>
             </form>
         </div>
     </main>
