@@ -40,64 +40,104 @@ header{
     }
 }
 
-.title_area {
-    background-color: #ffffff;
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-    height: 100px;
-    margin-left: 20px;
-}
-.title label {
-    font-size: 24px;
-    margin-right: 50px;
-}
+form {
+    > .title_area {
+        background-color: #ffffff;
+        display: flex;
+        min-width: 1200px;
+        align-items: baseline;
+        height: 100px;
+        border-top: 3px solid #533892;
+        border-bottom: 3px solid #8459EA;
+        margin: 420px 200px 0px 200px;
+        > .title {
+            min-width: 60px;
+            margin-top: 40px;
+            font-size: 24px;
+            margin-left: 30px;
+            margin-right: 50px;    
+        }
+        > .option_area input[type="text"] {
+            color: #533892;
+            font-weight: bold;
+            min-width: 600px;
+            font-size: 24px;
+            outline: none;
+            border-bottom: 3px solid #533892;
+        }
+    }
+    
+    > .attach_area {
+        background-color: #D4C5F9;
+        margin: 0px 200px 0px 200px;
+        height: 110px;
+        display: flex;
+        min-width: 1200px;
+        border-bottom: 3px solid #8459EA;
+        > .attach{
+            margin-top: 10px;  
+            > label {
+                min-width: 60px;
+                margin-left: 30px;
+                font-size: 12px;
+            }
+            > input[type="file"] {
+                cursor: pointer;
+                margin-left: 50px;
+                min-width: 800px;
+                height: 90px;
+                border: 0.5px solid #8A67DB;
+                border-radius: 5px;
+                background-color: #ffffff;
+            }
+        }
+    }
 
-.option_area input[type="text"] {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
+    .content_area {
+        display: flex;
+        margin: 0px 200px 10px 200px;
+        background-color: #ffffff;
+        min-height: 1000px;
+        min-width: 1200px;
+        border-bottom: 3px solid #8459EA;
+    }
+    
+    .content_area .content {
+        margin: 50px 50px 0px 30px;
+        font-size: 24px;
+    }
+    
+    .content_area > textarea {
+        margin-top: 50px;
+        font-size: 24px;
+        border: none;
+        outline: none;
+        width: 1100px;
+        white-space: normal;
+        overflow-wrap: break-word;
+        line-height: 1.5;
+    }
+    
+    .button_area {
+        display: flex;
+        justify-content: center;
+        margin: 20px 200px 50px 200px;
+        min-width: 1200px;
+    }
 
-.attach label {
-    font-size: 12px;
-    margin-right: 10px;
-}
+    .button_area input[type="submit"] {
+        background-color: #ffffff;
+        color: #8459EA;
+        font-weight: bold;
+        border: 3px solid #8459EA;
+        padding: 10px 20px;
+        border-radius: 20px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        margin-left: 50px;
+    }
 
-.attach input[type="file"] {
-    border: none;
-    background-color: #8155EA;
-}
-
-form div:nth-child(3){
-    margin-top: 20px;
-}
-
-form div:nth-child(3) p {
-    text-align: center;
-}
-
-form div:nth-child(3) input[type="text"] {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    width: 70%;
-    height: auto;
-}
-
-form div:nth-child(3) input[type="submit"] {
-    background-color: #ffffff;
-    color: #8459EA;
-    font-weight: bold;
-    border-color: #8459EA;
-    border-style: solid;
-    padding: 10px 20px;
-    border-radius: 20px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-form div:nth-child(3) input[type="submit"]:hover {
-    background-color: #D4C5F9;
+    .button_area input[type="submit"]:hover {
+        background-color: #D4C5F9;
+    }
 }
