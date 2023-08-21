@@ -70,15 +70,15 @@ header{
     background-color: #8155EA;
 }
 
-form {
+form div:nth-child(3){
     margin-top: 20px;
 }
 
-form p {
+form div:nth-child(3) p {
     text-align: center;
 }
 
-form input[type="text"] {
+form div:nth-child(3) input[type="text"] {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -86,7 +86,7 @@ form input[type="text"] {
     height: auto;
 }
 
-form input[type="submit"] {
+form div:nth-child(3) input[type="submit"] {
     background-color: #ffffff;
     color: #8459EA;
     font-weight: bold;
@@ -98,6 +98,6 @@ form input[type="submit"] {
     transition: background-color 0.3s;
 }
 
-form input[type="submit"]:hover {
+form div:nth-child(3) input[type="submit"]:hover {
     background-color: #D4C5F9;
 }

@@ -18,7 +18,7 @@ def getdata(title=False, id=False, value=None):
     cur = conn.cursor()
 
     if title:
-        sql = "SELECT content, id FROM userTable WHERE content LIKE %s"  # 조건이 주어진 경우
+        sql = "SELECT title, id FROM userTable WHERE title LIKE %s"  # 조건이 주어진 경우
         cur.execute(sql, ('%' + value + '%',))
         
     elif id:

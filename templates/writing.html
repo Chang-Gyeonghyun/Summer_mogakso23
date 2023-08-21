@@ -21,25 +21,25 @@
         </div>
     </header>
     <main>
-        <div class="title_area">
-            <strong class="title">
-                <label for="subject_title">제목</label>
-            </strong>
-            <div class="option_area">
-                <input type="text">
+        <form method="POST" action"/posting">
+            <div class="title_area">
+                <strong class="title">
+                    <label for="subject_title">제목</label>
+                </strong>
+                <div class="option_area">
+                    <input type="text">
+                </div>
             </div>
-        </div>
-        <div class="attach_area">
-            <strong class="attach">
-                <label for="attachment">첨부 파일</label>
-                <input type="file">
-            </strong>
-        </div>
-        <div>
-            <form method="POST" action"/posting">
+            <div class="attach_area">
+                <strong class="attach">
+                    <label for="attachment">첨부 파일</label>
+                    <input type="file">
+                </strong>
+            </div>
+            <div>
                 <p><label><input type="text" name="content"></label>&nbsp&nbsp&nbsp<input type="submit" value="작성하기" onclick="alert('작성 완료!')"></p>
-            </form>
-        </div>
+            </div>
+        </form>
     </main>
     <script src="{{ url_for('static', filename='js/header.js') }}"></script>
 </body>
