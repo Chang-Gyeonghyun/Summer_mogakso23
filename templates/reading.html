@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CHT_cloud</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/writing.css') }}">
+    <link rel="stylesheet" href="../static/css/reading.css">
 </head>
 
 <body>
@@ -17,17 +17,44 @@
 
         <div id="etc">
             <button>POSTING</button>
+            {% if login %}
+            <button>LOG OUT</button>
+            {% else %}
             <button>LOGIN</button>
+            {% endif %}
         </div>
     </header>
-    <main>  
+    <main>
         <div>
-            <form method="POST" action"/posting">
-                <p><label>Input the content<input type="text" name="content"></label>&nbsp&nbsp&nbsp<input type="submit" value="작성하기" onclick="alert('작성 완료!')"></p>
-            </form>
+            <div class="title_area">
+                <strong class="title">
+                    <label for="subject_title">Title</label>
+                </strong>
+                <div class="option_area">
+                    {{data[0]}}
+                </div>
+            </div>
+            <div class="attach_area">
+                <strong class="attach">
+                    <label for="attachment">Attach File</label>
+                    <a href="/download?file_name={{data[4]}}">{{data[4]}}<a>
+                </strong>
+            </div>
+            <div class="content_area">
+                <strong class="content">
+                    <label for="contents">Content</label>
+                </strong>
+                <p>{{data[3]}}</p>
+            </div>
+            <div class="button_area">
+                <input type="submit" name="Back" value="Back" onclick="location.href='/posting'">
+            </div>
         </div>
     </main>
+    
+    </main>
     <script src="{{ url_for('static', filename='js/header.js') }}"></script>
+    <script src="../static/js/writing.js"></script>
 </body>
 
 </html>

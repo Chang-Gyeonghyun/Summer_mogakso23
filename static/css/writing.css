@@ -107,7 +107,7 @@ form {
         font-size: 24px;
     }
     
-    .content_area > p[contenteditable="true"] {
+    .content_area > textarea {
         margin-top: 50px;
         font-size: 24px;
         border: none;
