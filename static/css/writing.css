@@ -41,7 +41,8 @@ header{
 }
 
 form {
-    > .title_area {
+    .title_area {
+        opacity: 0.9;
         background-color: #ffffff;
         display: flex;
         min-width: 1200px;
@@ -50,72 +51,89 @@ form {
         border-top: 3px solid #533892;
         border-bottom: 3px solid #8459EA;
         margin: 420px 200px 0px 200px;
-        > .title {
-            min-width: 60px;
-            margin-top: 40px;
-            font-size: 24px;
-            margin-left: 30px;
-            margin-right: 50px;    
-        }
-        > .option_area input[type="text"] {
-            color: #533892;
-            font-weight: bold;
-            min-width: 600px;
-            font-size: 24px;
-            outline: none;
-            border-bottom: 3px solid #533892;
-        }
     }
     
-    > .attach_area {
+    .title_area > .title {
+        min-width: 60px;
+        margin-top: 40px;
+        font-size: 32px;
+        margin-left: 24px;
+        margin-right: 50px;
+        font-weight: bold;
+    }
+    
+    .title_area > .option_area input[type="text"] {
+        color: #533892;
+        font-weight: bold;
+        min-width: 800px;
+        font-size: 24px;
+        outline: none;
+        border-bottom: 3px solid #533892;
+        margin-left: 16px;
+    }
+    
+    .attach_area {
         background-color: #D4C5F9;
         margin: 0px 200px 0px 200px;
         height: 110px;
         display: flex;
         min-width: 1200px;
         border-bottom: 3px solid #8459EA;
-        > .attach{
-            margin-top: 10px;  
-            > label {
-                min-width: 60px;
-                margin-left: 30px;
-                font-size: 12px;
-            }
-            > input[type="file"] {
-                cursor: pointer;
-                margin-left: 50px;
-                min-width: 800px;
-                height: 90px;
-                border: 0.5px solid #8A67DB;
-                border-radius: 5px;
-                background-color: #ffffff;
-            }
-        }
     }
+    
+    .attach_area > .attach {
+        margin-top: 10px;
+    }
+    
+    .attach_area > .attach > label {
+        min-width: 60px;
+        margin-left: 30px;
+        font-size: 16px;
+    }
+    
+    .attach_area > .attach > input[type="file"] {
+        opacity: 0.8;
+        margin-left: 36px;
+        min-width: 800px;
+        height: 90px;
+        border: 0.5px solid #8A67DB;
+        border-radius: 5px;
+        background-color: #ffffff;
+    }
+    
 
     .content_area {
+        opacity: 0.7;
         display: flex;
         margin: 0px 200px 10px 200px;
         background-color: #ffffff;
         min-height: 1000px;
-        min-width: 1200px;
+        min-width: 100px;
         border-bottom: 3px solid #8459EA;
     }
     
     .content_area .content {
-        margin: 50px 50px 0px 30px;
+        margin: 55px 50px 0px 30px;
         font-size: 24px;
     }
     
     .content_area > textarea {
-        margin-top: 50px;
+        margin: 50px 0px 60px -20px;
         font-size: 24px;
-        border: none;
+        border: 2px solid #D4C5F9;
+        border-radius: 10px;
         outline: none;
-        width: 1100px;
+        width: 1200px;
         white-space: normal;
         overflow-wrap: break-word;
         line-height: 1.5;
+        padding-left: 20px;
+        padding-top: 5px;
+    }
+
+    .content_area > textarea::placeholder {
+        color: #533892;
+        font-weight: bold;
     }
     
     .button_area {
@@ -135,6 +153,7 @@ form {
         cursor: pointer;
         transition: background-color 0.3s;
         margin-left: 50px;
+        margin-right: 50px;
     }
 
     .button_area input[type="submit"]:hover {
