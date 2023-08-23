@@ -41,7 +41,8 @@ header{
 }
 main{
     > div {
-        > .title_area {
+        .title_area {
+            opacity: 0.9;
             background-color: #ffffff;
             display: flex;
             min-width: 1200px;
@@ -50,50 +51,57 @@ main{
             border-top: 3px solid #533892;
             border-bottom: 3px solid #8459EA;
             margin: 420px 200px 0px 200px;
-            > .title {
-                min-width: 60px;
-                margin-top: 40px;
-                font-size: 24px;
-                margin-left: 30px;
-                margin-right: 50px;    
-            }
-            > .option_area input[type="text"] {
-                color: #533892;
-                font-weight: bold;
-                min-width: 600px;
-                font-size: 24px;
-                outline: none;
-                border-bottom: 3px solid #533892;
-            }
         }
         
-        > .attach_area {
+        .title_area > .title {
+            min-width: 60px;
+            margin-top: 40px;
+            font-size: 32px;
+            font-weight: bold;
+            margin-left: 24px;
+            margin-right: 50px;
+        }
+        
+        .title_area > .option_area {
+            color: #533892;
+            font-weight: bold;
+            min-width: 800px;
+            font-size: 24px;
+            outline: none;
+            margin-left: 16px;
+        }
+        
+        .attach_area {
             background-color: #D4C5F9;
             margin: 0px 200px 0px 200px;
-            height: 110px;
+            height: 50px;
             display: flex;
             min-width: 1200px;
             border-bottom: 3px solid #8459EA;
-            > .attach{
-                margin-top: 10px;  
-                > label {
-                    min-width: 60px;
-                    margin-left: 30px;
-                    font-size: 12px;
-                }
-                > input[type="file"] {
-                    cursor: pointer;
-                    margin-left: 50px;
-                    min-width: 800px;
-                    height: 90px;
-                    border: 0.5px solid #8A67DB;
-                    border-radius: 5px;
-                    background-color: #ffffff;
-                }
-            }
         }
+        
+        .attach_area > .attach {
+            margin-top: 10px;
+        }
+        
+        .attach_area > .attach > label {
+            min-width: 60px;
+            margin-left: 30px;
+            font-size: 16px;
+        }
+        
+        .attach_area > .attach > a {
+            opacity: 0.8;
+            margin-left: 36px;
+            min-width: 800px;
+            height: 90px;
+            color: inherit;
+            text-decoration: none;
+        }
+        
 
         .content_area {
+            opacity: 0.7;
             display: flex;
             margin: 0px 200px 10px 200px;
             background-color: #ffffff;
@@ -107,10 +115,9 @@ main{
             font-size: 24px;
         }
         
-        .content_area > p{
-            margin-top: 50px;
+        .content_area > p {
+            margin: 50px 0px 50px -20px;
             font-size: 24px;
-            border: none;
             outline: none;
             width: 1100px;
             white-space: normal;
@@ -134,7 +141,6 @@ main{
             border-radius: 20px;
             cursor: pointer;
             transition: background-color 0.3s;
-            margin-left: 50px;
         }
 
         .button_area input[type="submit"]:hover {

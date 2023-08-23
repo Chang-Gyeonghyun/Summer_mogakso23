@@ -6,11 +6,11 @@ const Post = Postlist.querySelectorAll("li");
 liElements.forEach(li => {
     li.addEventListener("click", function(e) {
         console.log("click")
-        const sort = "writer"; // Á¤·Ä ¹æ½Ä ("writer"·Î ÇÏµåÄÚµùµÈ ¿¹½Ã)
-        const subject = li.textContent; // Å¬¸¯ÇÑ ¸®½ºÆ® ¾ÆÀÌÅÛÀÇ ³»¿ë
+        const sort = "writer"; // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ("writer"ï¿½ï¿½ ï¿½Ïµï¿½ï¿½Úµï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½)
+        const subject = li.textContent; // Å¬ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Æ® ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
         
         const url = `/posting?sort=${sort}&subject=${encodeURIComponent(subject)}`;
-        window.location.href = url; // ÆäÀÌÁö ¸®µð·º¼Ç
+        window.location.href = url; // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ð·º¼ï¿½
     });
 });
 
@@ -23,6 +23,6 @@ Post.forEach(li => {
         const subject = spanlist[2].textContent;
         
         const url = `/reading?title=${title}&writer=${encodeURIComponent(subject)}`;
-        window.location.href = url; // ÆäÀÌÁö ¸®µð·º¼Ç
+        window.location.href = url; // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ð·º¼ï¿½
     });
 });
