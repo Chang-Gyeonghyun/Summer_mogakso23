@@ -41,7 +41,11 @@ def search():
             subject = "TOTAL"
         if result:
             Isdata = True
-            return render_template("posting.html", login=writable, Isdata=Isdata, items=reversed(result), subject = subject)
+            if subject == "TOTAL":
+                arg = "TOTAL"
+            else:
+                arg = result[0][1]
+            return render_template("posting.html", login=writable, Isdata=Isdata, items=reversed(result), subject = arg)
     return render_template("posting.html", login=writable, Isdata=Isdata,subject=subject) #{%%}는 html내에 python코드를 넣게 해준다.
 
 
