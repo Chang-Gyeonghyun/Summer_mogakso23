@@ -8,7 +8,7 @@ app.secret_key = "adfafsafsafsa1"
 
 manager= {
     "Chang":"0416",
-    "Hun": "1234",
+    "Hun": "1228",
     "Thing": "0128"
 }
 

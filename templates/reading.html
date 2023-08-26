@@ -37,7 +37,9 @@
             <div class="attach_area">
                 <strong class="attach">
                     <label for="attachment">Attach File</label>
+                    {% if data[4] %}
                     <a href="/download?file_name={{data[4]}}">{{data[4]}}<a>
+                    {% endif %}
                 </strong>
             </div>
             <div class="content_area">
